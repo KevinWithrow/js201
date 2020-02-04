@@ -9,7 +9,15 @@
 // Examples:
 // tipAmount(100, 'good') --> 20
 // tipAmount(40, 'fair') --> 6
-
+function tipAmount () {
+    billAmount = 90
+    var serviceQual = {
+        'good' : 20,
+        'fair' : 15,
+        'poor' : 10,
+}
+return serviceQual('good') + billAmount
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
