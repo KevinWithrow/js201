@@ -9,14 +9,13 @@
 // Examples:
 // tipAmount(100, 'good') --> 20
 // tipAmount(40, 'fair') --> 6
-function tipAmount () {
-    billAmount = 90
-    var serviceQual = {
-        'good' : 20,
-        'fair' : 15,
-        'poor' : 10,
-}
-return serviceQual('good') + billAmount
+function tipAmount (billAmount, serviceLevel) {
+    const serviceObj = {
+        good : .2,
+        fair : .15,
+        poor : .1
+    }
+return billAmount * serviceObj[serviceLevel]
 }
 
 
@@ -29,7 +28,14 @@ return serviceQual('good') + billAmount
 // totalAmount(100, 'good') --> 120
 // totalAmount(40, 'fair') --> 46
 
-
+function totalAmount (billAmount, serviceLevel) {
+    const serviceObj = {
+        good : .2,
+        fair : .15,
+        poor : .1
+    }
+return billAmount * serviceObj[serviceLevel] + billAmount
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "splitAmount" that takes a bill amount, the level of service,
@@ -39,3 +45,11 @@ return serviceQual('good') + billAmount
 // Examples:
 // splitAmount(100, 'good', 5) --> 24
 // splitAmount(40, 'fair', 2) --> 23
+function splitAmount (billAmount, serviceLevel, numOfPeople) {
+    const serviceObj = {
+        good : .2,
+        fair : .15,
+        poor : .1
+    }
+return (billAmount * serviceObj[serviceLevel] + billAmount) / numOfPeople
+}

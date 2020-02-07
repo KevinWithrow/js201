@@ -20,7 +20,15 @@
 // isVowel('A') --> true
 // isVowel(99) --> false
 // isVowel({e: 'Elephant'}) --> false
-
+function isVowel (inputChar) {
+    const vowlesArray = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    for (let index = 0; index < vowlesArray.length; index++) {
+         if (vowlesArray[index] === inputChar) {
+            return true
+        } 
+    }
+    return false
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,6 +44,21 @@
 // isOdd(5) --> true
 // isOdd('7') --> false
 // isOdd(3.14) --> false
+function isEven (num) {
+    return (typeof num === 'number') && ( num % 2 === 0);
+}
+
+function isOdd (num) {
+    return (typeof num === 'number') && ( num % 1 === 0) && (num % 2 !== 0);
+
+}
+
+
+
+
+
+ 
+
 
 
 
@@ -53,3 +76,10 @@
 // isCapitalCity('Texas', 'Houston') --> false
 // isCapitalCity('Alaska', 'Juneau') --> true
 // isCapitalCity('Strawberry', 'Mango') --> false
+function isCapitalCity () {
+    var obj = [
+        {"state" : "Texas", "capital" : 'Austin'}
+        
+    ]
+    
+}
